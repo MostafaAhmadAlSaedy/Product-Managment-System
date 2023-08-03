@@ -1,0 +1,19 @@
+body {
+    background-image: url(../imgs/artistic-blurry.jpg);
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;}
+
+h1 {
+    font-family: 'Marcellus SC', serif;
+}
+
+.border-3 {
+    border-width: 1px !important;
+}
+.border-dark-subtle {
+    border-color: rgb(114, 170, 241) !important;
+}
+
+textarea {
+    resize: none;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Managment</title>
+    <link rel="icon" href="imgs/add.png">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus+SC&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="w-75 mx-auto bg-dark-subtle ">
+
+
+<h1 class="mt-5 text-center fw-bolder text-primary-emphasis"> Product Managment System </h1>
+
+    <div class="py-5">
+        <label for="pn" class="py-1 fw-bold ms-1">Product Name</label>
+        <input onkeyup="validateNameInput(this.value)" type="text" class="form-control pb-3" id="pn">
+        <div class=" mt-1 ps-2 py-1 text-danger fw-bolder d-none" id="productNameWarning">Product name first letter must be capital and contain at least 3 letters.</div>
+
+        <label for="pp" class="py-1 fw-bold ms-1">Product Price</label>
+        <input type="number" class="form-control pb-3" id="pp">
+        <div class=" mt-1 ps-2 py-1 text-danger fw-bolder d-none" id="productPriceWarning">Product price must not exceed 10000.</div>
+
+        <label for="pc" class="py-1 fw-bold ms-1">Product Category</label>
+        <input type="text" class="form-control pb-3" id="pc">
+        <div class=" mt-1 ps-2 py-1 text-danger fw-bolder d-none" id="productCategoryWarning">Product category must contain at least 3 letters.</div>
+
+        <label for="pe" class="py-1 fw-bold ms-1">Product Evaluation</label>
+        <input id="pe" class="form-control pb-3"></input>
+        <div class=" mt-1 ps-2 py-1 text-danger fw-bolder d-none" id="productEvaluationWarning">Evaluation must contain one of the following (Bad, Moderate, Good, V.Good, Excellent)</div>
+
+        <button id="addBtn" class="btn btn-primary mt-4  fs-6 fw-bolder" onclick="addProduct()" >Add Product</button>
+        <button id="updBtn" class="btn btn-dark mt-4  fs-6 fw-bolder d-none" onclick="updateProduct()" >Update Product</button>
+    </div>
+
+    <input onkeyup="searchProduct( this.value )" id="searchAny" type="text" class="form-control mb-4 border border-info-subtle" placeholder="Search">
+
+    <div class="container overflow-x-auto">
+        <table class="table table-striped border border-3 border-dark-subtle table-responsive">
+            <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Product Name</th>
+                    <th>Product Price</th>
+                    <th>Product Category</th>
+                    <th>Product Evaluation</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+
+
+    
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
